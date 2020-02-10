@@ -40,3 +40,32 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Section
+const navSection = document.querySelectorAll("nav a");
+
+navSection[0].textContent = siteContent.nav["nav-item-1"];
+navSection[1].textContent = siteContent.nav["nav-item-2"];
+navSection[2].textContent = siteContent.nav["nav-item-3"];
+navSection[3].textContent = siteContent.nav["nav-item-4"];
+navSection[4].textContent = siteContent.nav["nav-item-5"];
+navSection[5].textContent = siteContent.nav["nav-item-6"];
+
+
+// Append and Prepend children
+const newNav1 = document.createElement("a");
+const newNav2 = document.createElement("a");
+const navList = document.querySelector('nav');
+
+newNav1.textContent = "Append";
+newNav2.textContent = "Prepend";
+
+navList.appendChild(newNav1);
+navList.prepend(newNav2);
+newNav1.style.color = "green";
+newNav2.style.color = "green";
+
+navSection.forEach(item => item.style.color = "green");
+
+
+
